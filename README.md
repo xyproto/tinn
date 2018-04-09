@@ -1,4 +1,4 @@
-# tinn ![](img/logo.png)
+![](img/tinn_logo.png)
 
 Tinn (Tiny Neural Network) is a fork of [Tinn](https://github.com/glouw/tinn).
 
@@ -12,7 +12,7 @@ Tinn can be compiled with [Sakemake](https://github.com/xyproto/sakemake), the c
 
 ## Building and running
 
-Using `resources/semeion.data` for training.
+Using `resources/[semeion.data](http://archive.ics.uci.edu/ml/machine-learning-databases/semeion/semeion.data)` for training.
 
     sm run
 
