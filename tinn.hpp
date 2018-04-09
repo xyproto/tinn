@@ -1,21 +1,21 @@
 #pragma once
 
-typedef struct
-{
-    float* w; // All the weights.
-    float* x; // Hidden to output layer weights.
-    float* b; // Biases.
-    float* h; // Hidden layer.
-    float* o; // Output layer.
+namespace Tinn {
 
-    int nb; // Number of biases - always two - Tinn only supports a single hidden layer.
-    int nw; // Number of weights.
+typedef struct {
+  float* w;  // All the weights.
+  float* x;  // Hidden to output layer weights.
+  float* b;  // Biases.
+  float* h;  // Hidden layer.
+  float* o;  // Output layer.
 
-    int nips; // Number of inputs.
-    int nhid; // Number of hidden neurons.
-    int nops; // Number of outputs.
-}
-Tinn;
+  int nb;  // Number of biases - always two - Tinn only supports a single hidden layer.
+  int nw;  // Number of weights.
+
+  int nips;  // Number of inputs.
+  int nhid;  // Number of hidden neurons.
+  int nops;  // Number of outputs.
+} Tinn;
 
 // Trains a tinn with an input and target output with a learning rate.
 // Returns error rate of the neural network.
@@ -37,3 +37,5 @@ Tinn xtload(const char* path);
 
 // Frees a tinn from the heap.
 void xtfree(Tinn);
+
+}  // namespace Tinn

@@ -1,36 +1,21 @@
-![](img/logo.PNG)
+# tinn ![](img/logo.png)
 
-Tinn (Tiny Neural Network) is a 200 line dependency free neural network library written in C99.
-Tinn can be compiled with any C++ compiler as well.
+Tinn (Tiny Neural Network) is a fork of [Tinn](https://github.com/glouw/tinn).
 
-    #include "Tinn.h"
-    #include <stdio.h>
+Tinn (Tiny Neural Network) is a 200 line dependency free neural network library written in C++17 compatible code, for Linux, BSD or macOS.
 
-    #define len(a) ((int) (sizeof(a) / sizeof(*a)))
+Tinn can be compiled with [Sakemake](https://github.com/xyproto/sakemake), the configuration-free build system for C++17.
 
-    int main()
-    {
-        float in[] = { 0.05, 0.10 };
-        float tg[] = { 0.01, 0.99 };
-        /* Two hidden neurons */
-        const Tinn tinn = xtbuild(len(in), 2, len(tg));
-        for(int i = 0; i < 1000; i++)
-        {
-            float error = xttrain(tinn, in, tg, 0.5);
-            printf("%.12f\n", error);
-        }
-        xtfree(tinn);
-        return 0;
-    }
+## Building
 
-For a quick demo, get some training data:
+    sm
 
-    wget http://archive.ics.uci.edu/ml/machine-learning-databases/semeion/semeion.data
+## Building and running
 
-And if you're on Linux / MacOS just build and run:
+Using `resources/semeion.data` for training.
 
-    make; ./tinn
+    sm run
 
-If you're on Windows it's:
+## Running unit tests
 
-    mingw32-make & tinn.exe
+    sm test
