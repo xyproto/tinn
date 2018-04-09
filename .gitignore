@@ -1,7 +1,6 @@
-*.dat*
-*.txt
 *.o
-*.d
-tinn
-nn.py
 *.tinn
+*.bak
+*.swp
+*~
+tinnpp

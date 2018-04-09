@@ -1,8 +1,6 @@
-![](img/tinn_logo.png)
+Tinnpp (Tiny Neural Network++) is a fork of [Tinn](https://github.com/glouw/tinn).
 
-Tinn (Tiny Neural Network) is a fork of [Tinn](https://github.com/glouw/tinn).
-
-Tinn (Tiny Neural Network) is a 200 line dependency free neural network library written in C++17 compatible code, for Linux, BSD or macOS.
+Tinnpp (Tiny Neural Network++) is a 200 line dependency free neural network library written in C++17 compatible code, for Linux, BSD or macOS.
 
 Tinn can be compiled with [Sakemake](https://github.com/xyproto/sakemake), the configuration-free build system for C++17.
 
@@ -12,7 +10,7 @@ Tinn can be compiled with [Sakemake](https://github.com/xyproto/sakemake), the c
 
 ## Building and running
 
-Using `resources/[semeion.data](http://archive.ics.uci.edu/ml/machine-learning-databases/semeion/semeion.data)` for training.
+Using resources/[`resources/semeion.data`](http://archive.ics.uci.edu/ml/machine-learning-databases/semeion/semeion.data) for training.
 
     sm run
 
