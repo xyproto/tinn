@@ -12,7 +12,7 @@ Tinn++ can be compiled with [Sakemake](https://github.com/xyproto/sakemake), the
 
 ## Building and running
 
-Using resources/[`resources/semeion.data`](http://archive.ics.uci.edu/ml/machine-learning-databases/semeion/semeion.data) for training.
+Using [`./resources/semeion.data`](http://archive.ics.uci.edu/ml/machine-learning-databases/semeion/semeion.data) for training.
 
     sm run
 
