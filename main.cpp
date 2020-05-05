@@ -4,6 +4,20 @@
 #include <ctime>
 #include "tinn.hpp"
 
+#include <fstream>
+#include <iostream>
+#include <iterator>
+#include <optional>
+#include <sstream>
+#include <string>
+#include <vector>
+
+using namespace std::literals;
+
+using std::ifstream;
+using std::string;
+using std::vector;
+
 typedef struct {
   float** in;
   float** tg;
@@ -11,6 +25,18 @@ typedef struct {
   int nops;
   int rows;
 } Data;
+
+vector<string> readLines(const string filename) {
+  vector<string> lines{};
+  string line;
+  ifstream infile{filename, ifstream::in};
+  if (infile.is_open()) {
+    while (getline(infile, line)) {
+      lines.push_back(line);
+    }
+  }
+  return lines;
+}
 
 static int lns(FILE* const file) {
   int ch = EOF;
